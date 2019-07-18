@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--Switch-->
+<!--<button id="btn" value="on" onclick="getButton()">On</button>-->
+<!--<button id="btn" value="off" onclick="getButton()">Off</button>-->
+
+<script>
+
+
+    // function getButton() {
+    //     this.result = "";
+    //     this.getResult = function (SwitchButton) {
+    //         SwitchButton.result = document.getElementById("btn").value;
+    //         return result;
+    //     }
+    // }
+
+    function ElectricLamp() {
+        this.status = "";
+        this.showLamp = function () {
+            if (this.status == "on") {
+                alert("Bóng đèn sáng");
+            } else if (this.status == "off") {
+                alert("Bóng đèn tắt");
+            }
+        }
+    }
+
+    function SwitchButton() {
+        this.result = "";
+        this.TurnOn = function (ElectricLamp) {
+            ElectricLamp.status = "on";
+        }
+        this.TurnOff = function (ElectricLamp) {
+            ElectricLamp.status = "off";
+        }
+    }
+
+    // let _click = new getButton();
+    let electric = new ElectricLamp();
+    let button = new SwitchButton();
+    // _click.getResult(button);
+    button.TurnOn(electric);
+    electric.showLamp();
+
+
+    // function SwitchButton(_status) {
+    //     this.Status = _status;
+    //     this.setStatus = function (_status) {
+    //         this.Status = _status;
+    //     }
+    //     this.getStatus = function () {
+    //         return this.Status;
+    //     }
+    // }
+    // let newswitch = new SwitchButton("on")
+    // let b = newswitch.getStatus();
+    // let newElectric = new ElectricLamp(b);
+    // function ElectricLamp(a) {
+    //     this.status = a;
+    //     if (this.status == "on") {
+    //         alert("Bóng đèn sáng");
+    //     } else if (this.status == "off") {
+    //         alert("Bóng đèn tắt");
+    //     }
+    //
+    // }
+
+
+</script>
+</body>
+</html>
